@@ -7,13 +7,6 @@ pipeline {
       }
     }
 
-    stage('log') {
-      steps {
-        sh '''pwd
-ls -la'''
-      }
-    }
-
     stage('build') {
       steps {
         sh 'docker build -t webapp:latest . '
