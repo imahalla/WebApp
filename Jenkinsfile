@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout Code') {
       steps {
-        git(url: 'https://github.com/imahalla/WebApp.git', branch: 'nain')
+        git(url: 'https://github.com/imahalla/WebApp', branch: 'nain')
       }
     }
 
