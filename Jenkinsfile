@@ -1,11 +1,20 @@
 pipeline {
   agent any
-  stages {
-    stage('Checkout Code') {
-      steps {
-        git(url: 'https://github.com/imahalla/WebApp', branch: 'nain')
-      }
+    stages {
+        stage('Build') {
+            steps {
+                echo "Building the aplication..."
+            }
+        }
+        stage('Test') {
+            steps {
+                echo "Testing the aplication..."
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the aplication...'
+            }
+        }
     }
-
-  }
 }
